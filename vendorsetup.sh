@@ -47,7 +47,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		export OF_FLASHLIGHT_ENABLE=1
 		export OF_FL_PATH1="/system/flashlight"
 		export OF_FL_PATH2=""
-		export FOX_VERSION="R11.1_1"
+		export FOX_VERSION="R11.1_2"
+		export FOX_VARIANT="A12"
 		export OF_SCREEN_H="2400"
 		export OF_HIDE_NOTCH=1
 		export OF_CLOCK_POS=1
@@ -61,6 +62,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		export OF_USE_GREEN_LED=0
     		export OF_MAINTAINER="Johx22 & xxTurborocketxx"
 
+		#R11
 		export FOX_BUILD_TYPE=Beta
 
 		# run a process after formatting data to work-around MTP issues
