@@ -34,3 +34,13 @@ on fs
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
     export ANDROID_ROOT /system_root
+
+on property:sys.usb.ffs.ready=1
+    start mountfix
+    
+service mountfix /sbin/sh /system/bin/mount.sh
+    user root
+    group root
+    oneshot
+    disabled
+    seclabel u:r:recovery:s0
