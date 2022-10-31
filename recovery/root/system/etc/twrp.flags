@@ -34,4 +34,4 @@ odm		/odm		ext4							wait,logical,first_stage_mount
 
 # Removable storage
 /sdcard1    	vfat		/dev/block/mmcblk0p1 /dev/block/mmcblk0					flags=fsflags=utf8;display="MicroSD";storage;wipeingui;removable
-/usb-otg	    vfat		/dev/block/sde1	/dev/block/sde				          flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable
+/usb_otg	    vfat		/dev/block/sde1	/dev/block/sde				          flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable
