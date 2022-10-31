@@ -35,6 +35,7 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
+		export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
 		export ALLOW_MISSING_DEPENDENCIES=true
 		export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 		export LC_ALL="C"
@@ -60,8 +61,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		export OF_USE_GREEN_LED=0
     		export OF_MAINTAINER="Johx22 & xxTurborocketxx"
 
-		#R11
-		export FOX_R11=1
 		export FOX_BUILD_TYPE=Beta
 
 		# run a process after formatting data to work-around MTP issues
