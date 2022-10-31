@@ -30,7 +30,8 @@ odm		/odm		ext4							wait,logical,first_stage_mount
 /prism_image	emmc		/dev/block/bootdevice/by-name/prism			flags=backup=1;flashimg;display="Prism Image"
 /vbmeta_samsung	emmc		/dev/block/bootdevice/by-name/vbmeta_samsung
 /vbmeta_system	emmc		/dev/block/bootdevice/by-name/vbmeta_system
+/storage            ext4         /data/media/0                                   flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 
 # Removable storage
-/external_sd	vfat		/dev/block/mmcblk0p1 /dev/block/mmcblk0					flags=fsflags=utf8;display="Micro-SD";storage;wipeingui;removable
-/usb-otg	    vfat		/dev/block/sde1	/dev/block/sde				          flags=fsflags=utf8;display="USB-OTG";storage;wipeingui;removable
+/sdcard1    	vfat		/dev/block/mmcblk0p1 /dev/block/mmcblk0					flags=fsflags=utf8;display="MicroSD";storage;wipeingui;removable
+/usb-otg	    vfat		/dev/block/sde1	/dev/block/sde				          flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable
